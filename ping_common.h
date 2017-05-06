@@ -34,7 +34,8 @@
 #include <linux/types.h>
 #include <linux/errqueue.h>
 
-#include "SNAPSHOT.h"
+//#include "SNAPSHOT.h"
+static char SNAPSHOT[] = "s20151218";
 
 #define	DEFDATALEN	(64 - 8)	/* default data length */
 

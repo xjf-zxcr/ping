@@ -106,9 +106,9 @@ endif
 endif
 
 # -------------------------------------
-IPV4_TARGETS=tracepath ping clockdiff rdisc arping tftpd rarpd
+#IPV4_TARGETS=tracepath ping clockdiff rdisc arping tftpd rarpd
 #IPV6_TARGETS=tracepath6 traceroute6 ping6
-TARGETS=$(IPV4_TARGETS) $(IPV6_TARGETS)
+TARGETS=$(IPV4_TARGETS) $(IPV6_TARGETS) ping
 
 CFLAGS=$(CCOPTOPT) $(CCOPT) $(GLIBCFIX) $(DEFINES)
 LDLIBS=$(LDLIB) $(ADDLIB)
@@ -219,9 +219,9 @@ html:
 
 clean:
 	@rm -f *.o $(TARGETS)
-	@$(MAKE) -C Modules clean
-	@$(MAKE) -C doc clean
-	@set -e; \
+#	@$(MAKE) -C Modules clean
+#	@$(MAKE) -C doc clean
+#	@set -e; \
 		if [ -f ninfod/Makefile ]; then \
 			$(MAKE) -C ninfod clean; \
 		fi
